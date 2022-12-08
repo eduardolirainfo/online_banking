@@ -1,2 +1,2 @@
-# online_banking
+# pybanking
 Online Banking in Flask
