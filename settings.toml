@@ -2,7 +2,7 @@
 DEBUG = false
 SQLALCHEMY_DATABASE_URI = 'sqlite:///development.db'
 TITLE = "Pybanking"
-SECRET_KEY = "jadkfbsdkjbfbh"
+SECRET_KEY = 'jadkfbsdkjbfbhhkjkjhfkjdh1357526%$^"£"'
 PASSWORD_SCHEMES = ['pbkdf2_sha512', 'md5_crypt']
 EXTENSIONS = [
     "pybanking.blueprints.webui:init_app",

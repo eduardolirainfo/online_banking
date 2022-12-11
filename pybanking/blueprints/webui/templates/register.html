@@ -1,22 +1,40 @@
 {% extends 'base.html' %}
-{% block title %}{{config.get('TITLE')}}{% endblock %}
-
-{% block navbar %}
-<div class="navbar">
-    <div class="navbar-header">
-        <a class="navbar-brand" href="#">
-        </a>
-    </div>
-</div>
-{% endblock %}
 
 {% block content %}
-<div class="container">
-    <h1>{{config.get('TITLE')}}</h1>
+<div class="container px-4 py-5">
+    <h2 class="pb-2 border-bottom">Register</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+            </div>
+            <div class="col">
+                <form action="/register" method="post">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Username</label>
+                        <input type="text" name="username" class="form-control" id="exampleInputEmail1"
+                            aria-describedby="emailHelp">
+                        <div id="Username" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="text" name="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                {% for message in messages %}
+                {{ message }}
+                {% endfor %}
+                {% endif %}
+                {% endwith %}
+            </div>
+            <div class="col">
+            </div>
 
-    <div class="jumbotron">
-        <h1>Register Page</h1>
+
+        </div>
     </div>
-
 </div>
+
 {% endblock %}
